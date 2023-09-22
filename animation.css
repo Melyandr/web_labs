@@ -1,0 +1,16 @@
+@keyframes light_button {
+    0% {
+        background-color: #EE4D47; 
+      }
+      100% {
+        background-color: rgb(255, 115, 0); 
+      }
+}
+@keyframes go_car {
+  0% {
+    transform: translateX(-100%); 
+  }
+  100% {
+    transform: translateX(100%); 
+  }
+}

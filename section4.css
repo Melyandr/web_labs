@@ -1,0 +1,136 @@
+.About-people{
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    align-items: center;
+    
+    height: 20%;
+    color: #402B2B;
+    text-align: center;
+   justify-content: center;
+}
+
+.cards{
+    line-height: 30px;
+    box-shadow: 0 0 15px #EE4D471A;
+    border-radius: 10px;
+    width: 420px;
+    padding: 62px 52px 30px 80px ;
+    margin-top: 0;
+    margin-right: 30px;
+    margin-bottom: 4%;
+    text-align: justify;
+    background-color:white;
+    font-family: "Rubik";
+    font-weight: 50;
+    color: #402B2B;
+    font-size: 20px;
+    height: 8%;
+}
+
+#last-header{
+    color: #EE4D47;
+    align-items: center;
+    font-family: "Rubik";
+    font-size: 24px;
+    
+    margin-bottom: 0;
+    text-align: center;
+    
+}
+#last-title{
+    margin-top: 5px;
+    
+    color:#402B2B ;
+    font-size: 48px;
+    font-weight: 400;
+    font-family: "DM Serif Display";
+    text-align: center;
+    margin-bottom:5%;
+}
+
+
+
+
+#right-block-Peterson{
+    margin-top: 80px;
+    padding-top: 15%;
+    padding-right: 40%;
+    padding-left: 0;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+#central-block-simon{
+    margin-top: 60px;
+    padding-top: 5%;
+    padding-right: 40%;
+    padding-left: 0;
+    padding-bottom: 4%;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+#left-block-isaak{
+    
+    padding-right: 40%;
+    padding-left: 0;
+    margin-top: 75px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+.Isaak_image{
+    height: 30%;
+    margin-right: 10%;
+    padding-left: 10%;
+}
+.Simon_image{
+    height: 30%;
+    margin-right: 10%;
+    padding-left: 10%;
+}
+.Peterson_image{
+    height: 30%;
+    margin-right: 10%;
+    padding-left: 10%;
+    
+}
+#isak-p{
+    
+    display: inline-block;
+    white-space: nowrap;
+    
+}
+#simon-p{
+    display: inline-block;
+    white-space: nowrap;
+}
+#peterson-p{
+    display: inline-block;
+    white-space: nowrap;
+}
+#isak-text{
+    padding-top: 13px;
+    margin-top: 0%;
+    padding-bottom: 12%;
+    
+    font-family: "Rubik";
+    font-weight: 50;
+    color: #402B2B;
+}
+@media screen and (max-width:768px) {
+   .About-people{
+    flex-wrap:wrap ;
+    padding: 0;
+    margin-left: 8%;
+   }
+   .cards{
+    box-sizing: border-box;
+   }
+   #last-title{
+    font-size: 35px;
+   }
+}

@@ -1,0 +1,42 @@
+
+.footer-parts{
+    padding-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #EE4D47;
+}
+#left-part-footer{
+    padding-top: 25px;
+    color: #F8F9FA;
+    font-family: "Rubik";
+    font-size: 16px;
+    font-weight: 700;
+}
+#central-part-footer{
+    width: 212px;
+    height: 50px;
+    padding-top: 20px;
+}
+.section2{
+    display: flex;
+    justify-content: center;
+}
+.image3{
+    height:28px; 
+    width: 130px;
+    padding-top: 40px;
+}
+
+
+@media screen and (max-width:768px) {
+   .footer-parts{
+    background: #EE4D47;
+    flex-wrap: wrap;
+   }
+   #left-part-footer{
+    padding-top: 0;
+   }
+   .image3{
+    padding-bottom: 35px;
+   }
+}
