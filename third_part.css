@@ -25,13 +25,18 @@
     padding-left: 10px;
 }
 .edit_button{
-    width: 75px;
-    height: 28px;
+   
     margin-left: 5px;
-    background-color: #5BC0DE;
+    background-color: #5bb2de;
     color: white;
     border: none;
     border-radius: 5px;
+    padding-left: 10px;
+    margin-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 6.5px;
+    padding-right: 15px;
+   
 }
 .remove_button{
     width: 75px;
