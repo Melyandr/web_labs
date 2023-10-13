@@ -1,0 +1,43 @@
+.card{
+    width: 180px;
+    height: 306px;
+    margin-left: 10px;
+    padding-bottom: 30px;
+    margin-right: 50px;
+}
+.image_of_card{
+    width: 177px;
+    height: 100px;
+}
+.title_of_card{
+    font-weight: bold;
+    padding-left: 39px;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+    color: black;
+    width: 117px;
+    height: 26px;
+    margin-top: 0;
+}
+.description{
+    width: 156px;
+    height: 90px;
+    padding-left: 10px;
+}
+.edit_button{
+    width: 75px;
+    height: 28px;
+    margin-left: 5px;
+    background-color: #5BC0DE;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.remove_button{
+    width: 75px;
+    height: 28px;
+    background-color: #D9534F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

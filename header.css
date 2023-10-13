@@ -1,0 +1,88 @@
+a{
+    color: black;
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+.header{
+    background-color: #F8F8F8;
+    border: solid;
+    border-color: #BDBDBD;
+    border-radius: 5px;
+    border-width: 2px;
+    
+}
+.header_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding-right: 2rem;
+    margin-right: 0;
+}
+.header_nav_item{
+    font-family: "Source Sans Pro";
+    font-size: 1.3rem ;
+    color: #000000;
+    display: inline-block;
+    padding-left: 0.5rem;
+    
+}
+.header_nav_item_right ul{ 
+    font-size: 1.1rem;
+    width: auto;
+    align-items: center;
+    margin-right: auto;
+    display: inline;
+    
+}
+#Pencilcase{
+padding-right: 3rem;
+color: #777777;
+font-size: 1.65rem;
+}
+#Type_input{
+    font-size: 1rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    padding-left: 0.7rem;
+    margin-right: 0.5rem;
+    width: 15em;
+    border-color: #BDBDBD;
+    border-radius: 5px;
+}
+.right_items{
+    margin-right: 13%;
+}
+.left_items{
+    margin-left: 8%;
+}
+#Search_button{
+    font-family: "Source Sans Pro";
+    font-size: 1.4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    color: #0275D8;
+    border-color: #0275D8;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+#Clear_button{
+    font-family: "Source Sans Pro";
+    font-size: 1.4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    color: #D9534F;
+    border-color: #D9534F;
+    border-radius: 5px;
+}
+#my_pencilcase{
+    padding-right: 1rem;
+}
+
+
