@@ -1,0 +1,42 @@
+.About-pencilcases{
+    display: flex;
+    margin-left: 13%;
+}
+.pencilcase_three_photos{
+    height: 40%;
+    width: 50%;
+    margin-bottom: 0;
+
+
+}
+#central_photo{
+    margin-bottom: 0;
+    height: 20%;
+}
+/*#left-block{*/
+/*    width: 30%;*/
+/*    height: 50%;*/
+/*}*/
+/*#central-block{*/
+/*    width: 30%;*/
+/*    height: 50%;*/
+/*}*/
+/*#right-block{*/
+/*    width: 30%;*/
+/*    height: 50%;*/
+/*}*/
+
+#left-text{
+    width: 40%;
+    height: auto;
+}
+.titles{
+    font-weight: bold;
+    padding-left: 2%;
+}
+
+.cards{
+    width: 30%;
+    height: 45%;
+    margin-right: 7%;
+}
