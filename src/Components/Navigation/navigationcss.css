@@ -1,0 +1,33 @@
+.logo{
+    height: 40px;
+    margin-left: 100%;
+    margin-bottom: 0;
+
+}
+
+.header_nav_item {
+    text-decoration: none;
+    list-style: none;
+    margin-right: 80%;
+    text-align: center;
+
+
+}
+.header_nav_item a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+.header_li{
+    display: flex;
+    justify-content: space-around;
+}
+.hero_div{
+    display: flex;
+}
+#home_li{
+    margin-left: 1000%;
+}
+.hero ul{
+    margin-bottom: 0;
+}
