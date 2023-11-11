@@ -5,7 +5,7 @@ import twitter from "../../photos/twitter.jpg";
 import google from "../../photos/google_sevice.png";
 import linkedin from "../../photos/linkedinpng.png";
 const Footer=()=>(
-    <section>
+    <section className="footer_section">
         <hr></hr>
 
         <div className="footer_div">

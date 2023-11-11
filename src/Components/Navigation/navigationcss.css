@@ -31,3 +31,12 @@
 .hero ul{
     margin-bottom: 0;
 }
+.search_input{
+    margin-left: 60%;
+    margin-top: 1%;
+}
+#search{
+    border-radius: 6px;
+    border-color: #282c34;
+    height: 1.4rem;
+}

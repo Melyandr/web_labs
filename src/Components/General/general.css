@@ -1,11 +1,12 @@
 .About-pencilcases{
     display: flex;
-    margin-left: 13%;
+    justify-content: center;
 }
 .pencilcase_three_photos{
     height: 40%;
     width: 50%;
     margin-bottom: 0;
+    margin-left: 6rem;
 
 
 }
