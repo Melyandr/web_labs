@@ -1,0 +1,14 @@
+.container3{
+    display: flex;
+    margin-left: 11%;
+}
+.pencilcase_header_photo{
+    height: 80%;
+}
+.p1{
+    width: 70%;
+    height: auto;
+}
+.header_text{
+    margin-top: 4%;
+}
