@@ -57,7 +57,7 @@
 // )
 //
 // export default Navigation;
-import React from "react";
+import React,{useState} from "react";
 import logo from '../../photos/icon_logo.png';
 import Catalog from '../../pages/Catalog.js';
 import Home from '../../pages/Home.js';
@@ -71,37 +71,43 @@ import {
 
 } from "react-router-dom";
 
-const Navigation = () => (
+const Navigation = ({searchInputValue, setSearchInput}) => {
 
-        <section className="hero">
-            <div className="hero_div">
-                <div>
-                    <img className="logo" src={logo} alt="My Image" />
-                </div>
+    
 
-                <ul>
-                    <div className="header_li">
-                        <li className="header_nav_item" id="home_li"><Link to="/">Home</Link></li>
-                        <li className="header_nav_item"><Link to="/catalog">Catalog</Link></li>
-                        <li className="header_nav_item"><Link to="/card">Card</Link></li>
-                    </div>
-                </ul>
-
-                <div className="search_input">
-                    <input type="text" name="search" id="search" placeholder=""/>
-
-                </div>
+    return(<section className="hero">
+        <div className="hero_div">
+            <div>
+                <img className="logo" src={logo} alt="My Image"/>
             </div>
-            <hr />
+
+            <ul>
+                <div className="header_li">
+                    <li className="header_nav_item" id="home_li"><Link to="/">Home</Link></li>
+                    <li className="header_nav_item"><Link to="/catalog">Catalog</Link></li>
+                    <li className="header_nav_item"><Link to="/card">Card</Link></li>
+                </div>
+            </ul>
+
+            <div className="search_input">
+                <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    placeholder="Search"
+                    value={searchInputValue}
+                    onChange={setSearchInput}
+                />
+
+            </div>
+        </div>
+        <hr/>
 
 
-
-            <Outlet />
-        </section>
-
+        <Outlet/>
+    </section>);
 
 
-
-);
+};
 
 export default Navigation;

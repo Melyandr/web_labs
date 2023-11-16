@@ -11,26 +11,31 @@
     font-weight: bold;
     margin-right: 2.5rem;
 
+
 }
 .Card_button{
     background-color: #6f6768;
     color: white;
     border-radius: 5px;
-    padding: 8px 28px;
+    padding: 2px 24px;
     margin-left: 1.8rem;
-    margin-top: 1rem;
+    margin-top: 0rem;
     margin-bottom: 2rem;
+    text-decoration: none;
 }
 .card-price{
     margin-left: 1rem;
+
 }
 .cards_catalog{
     border-style: solid;
     border-color: #282c34;
     border-radius: 7px;
+    height: 70%;
     width: 12%;
     margin-right: 5%;
     border-width: 2px;
+
 }
 .card-block_price{
     width:auto;
