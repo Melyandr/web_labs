@@ -1,0 +1,59 @@
+.About-pencilcases-catalog{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.price_with_value{
+    display: flex;
+    justify-content: center;
+}
+.price_near_value{
+    font-weight: bold;
+    margin-right: 2.5rem;
+
+
+}
+.Card_button{
+    background-color: #6f6768;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 24px;
+    margin-left: 1.8rem;
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    text-decoration: none;
+}
+.card-price{
+    margin-left: 1rem;
+
+}
+.cards_catalog{
+    border-style: solid;
+    border-color: #282c34;
+    border-radius: 7px;
+    height: 70%;
+    width: 12%;
+    margin-right: 5%;
+    border-width: 2px;
+
+}
+.card-block_price{
+    width:auto;
+    margin-left: 3.5rem;
+
+}
+.card-text{
+    text-align: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.titles{
+    text-align: center;
+
+}
+.pencilcase_four_photos{
+    height: 40%;
+    width: 50%;
+    margin-bottom: 0;
+
+}
