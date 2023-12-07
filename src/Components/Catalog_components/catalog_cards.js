@@ -205,55 +205,49 @@ import central_photo from "../../photos/5.jpg";
 import right_photo from "../../photos/6.jpg";
 import CardWithPrice from "./card_with_price";
 import "../Catalog_components/catalog_cards.css";
+import {getAllPencilcases, getFilteredPencilcases} from "../../../src/Api/api.js";
 
-const CatalogCards = ({ searchInput, filters ,pencilCases2}) => {
-    // const pencilCases2 = [
-    //     { id: 1, photo: left_photo, title: "Kite", text: "A compact and versatile dfdfdfdbfd dssferfwefw", price: 30, size: 1 },
-    //     { id: 2, photo: central_photo, title: "Nike", text: "Pencil cases are perfect  fddgerge gggfb hrthrhr", price: 40, size: 8 },
-    //     { id: 3, photo: right_photo, title: "Brave", text: "These cases often use for office workhrg", price: 50, size: 3 },
-    //     { id: 4, photo: left_photo, title: "Brave", text: "A compact and versatileergege 5tgeger54 trtrhrthrt", price: 70, size: 4 },
-    // ];
-
-    const [filteredPencilCases, setFilteredPencilCases] = useState(pencilCases2);
-
-    // useEffect(() => {
-    //     const items = pencilCases2.filter((item) => {
-    //         const title = item.title || "";
-    //         return (
-    //             !searchInput || title.toLowerCase().includes(searchInput.toLowerCase())
-    //         );
-    //     });
-    //
-    //     setFilteredPencilCases(items);
-    // }, [searchInput]);
+const CatalogCards = ({ filters}) => {
+    let [pencilCases2, setPencilCases] = useState([""]);
 
     useEffect(() => {
-        console.log(pencilCases2)
-        const filteredItems = pencilCases2.filter((item) => {
-            // const title = item.title || "";
-            // console.log(title)
-            console.log(item.title)
-            return (
+        // Приклад виклику функції отримання всіх олівцевих коробок
+        const fetchAllPencilcases = async () => {
+            try {
+                const allPencilcases = await getAllPencilcases();
+                setPencilCases(allPencilcases)
+                console.log('All pencilcases:', allPencilcases);
 
-                // (item.title.toLowerCase().includes(searchInput.toLowerCase())) &&
-                (filters.cat === "All" || item.title === filters.cat) &&
-                (filters.sorts === "all" ||
-                    (filters.sorts === "cheap" && item.price < 50) ||
-                    (filters.sorts === "expensive" && item.price >= 50)) &&
-                (filters.size === "all" ||
-                    (filters.size === "big" && item.size > 2) ||
-                    (filters.size === "small" && item.size <= 2))
-                // add other filtering conditions as needed
-            );
-        });
+            } catch (error) {
+                console.error('Error fetching all pencilcases:', error);
+            }
+        };
 
-        setFilteredPencilCases(filteredItems);
-    }, [pencilCases2, filters]);
+        // Виклик функції отримання всіх олівцевих коробок
+        fetchAllPencilcases();
+    }, []);
+
+    const [filteredPencilCases, setFilteredPencilCases] = useState(pencilCases2);
+    useEffect(() => {
+        const fetchFilteredPencilcases = async () => {
+            try {
+                const allPencilcases = await getFilteredPencilcases(filters);
+                setPencilCases(allPencilcases)
+                console.log('Filtered pencilcases:', allPencilcases);
+
+            } catch (error) {
+                console.error('Error fetching all pencilcases:', error);
+            }
+        };
+
+        fetchFilteredPencilcases();
+    }, [filters]);
+
 
     return (
         <section>
             <div className="About-pencilcases-catalog">
-                {filteredPencilCases.map((pencilCase) => (
+                {pencilCases2.map((pencilCase) => (
                     <CardWithPrice
                         key={pencilCase.id}
                         id={pencilCase.id}

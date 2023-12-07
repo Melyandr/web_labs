@@ -1,14 +1,34 @@
-import React,{ useState } from "react";
+import React,{ useState, useEffect } from "react";
 import Footer from "../Components/Footer/Footer.js";
 import '../Components/Footer/Footer.css'
 import {Outlet, useParams} from "react-router-dom";
 import './item.css'
+import {getPencilcaseById} from "../Api/api.js";
 
 
-const Item = ({ pencilCases2 }) => {
+const Item = () => {
+
+
     const { id } = useParams();
     const itemId = parseInt(id);
-    const selectedItem = pencilCases2.find((pencilcase) => pencilcase.id === itemId);
+    let [selectedItem, setSelectedItem] = useState("");
+    useEffect(() => {
+        // Приклад виклику функції отримання всіх олівцевих коробок
+        const fetchPencilcase = async () => {
+            try {
+                const pencilcase = await getPencilcaseById(itemId);
+                setSelectedItem(pencilcase)
+                console.log('All pencilcases:', pencilcase);
+
+            } catch (error) {
+                console.error('Error fetching all pencilcases:', error);
+            }
+        };
+
+        // Виклик функції отримання всіх олівцевих коробок
+        fetchPencilcase();
+    }, []);
+    // const selectedItem = pencilCases2.find((pencilcase) => pencilcase.id === itemId);
 
 
 

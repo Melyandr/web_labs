@@ -5,15 +5,15 @@
 // import "./catalog_filters.css";
 //
 // const Catalog_filters = ({ applyFilter }) => {
-//     const [sorts, setSorts] = useState("all");
+//     const [brand, setBrand] = useState("all");
 //     const [cat, setCat] = useState("All");
 //     const [size, setSize] = useState("All");
 //
-//     const handleSortingChange = (e) => {
-//         setSorts(e.target.value);
+//     const handleBrandChange = (e) => {
+//         setBrand(e.target.value);
 //     };
 //
-//     const handleFilteringNameChange = (e) => {
+//     const handlePriceChange = (e) => {
 //         setCat(e.target.value);
 //     };
 //
@@ -22,17 +22,17 @@
 //     };
 //
 //     const handleApplyFilter = () => {
-//         applyFilter({ sorts, cat, size });
+//         applyFilter({ brand, cat, size });
 //     };
 //
-//     const catOptions = [
+//     const brandOptions = [
 //         { value: "All", label: "All" },
 //         { value: "Nike", label: "Nike" },
 //         { value: "Kite", label: "Kite" },
 //         { value: "Brave", label: "Brave" },
 //     ];
 //
-//     const sortOptions = [
+//     const priceOptions = [
 //         { value: "all", label: "All" },
 //         { value: "cheap", label: "Cheap" },
 //         { value: "expensive", label: "Expensive" },
@@ -47,14 +47,14 @@
 //     let arr_select = [
 //         {
 //             value: cat,
-//             options: catOptions,
-//             onChange: handleFilteringNameChange,
+//             options: brandOptions,
+//             onChange: handlePriceChange,
 //         },
 //
 //         {
-//             value: sorts,
-//             options: sortOptions,
-//             onChange: handleSortingChange,
+//             value: brand,
+//             options: priceOptions,
+//             onChange: handleBrandChange,
 //         },
 //
 //         {
@@ -97,16 +97,21 @@ import Select from "./Select";
 import "./catalog_filters.css";
 
 const Catalog_filters = ({ applyFilter }) => {
-    const [sorts, setSorts] = useState("all");
-    const [cat, setCat] = useState("All");
+    const [title, setTitle] = useState("");
+    const [brand, setBrand] = useState("all");
+    const [price, setPrice] = useState("all");
     const [size, setSize] = useState("all");
 
-    const handleSortingChange = (e) => {
-        setSorts(e.target.value);
+    const handleTitleChange = (e) => {
+        setTitle(e.target.value);
     };
 
-    const handleFilteringNameChange = (e) => {
-        setCat(e.target.value);
+    const handleBrandChange = (e) => {
+        setBrand(e.target.value);
+    };
+
+    const handlePriceChange = (e) => {
+        setPrice(e.target.value);
     };
 
     const handleSizeChange = (e) => {
@@ -114,17 +119,17 @@ const Catalog_filters = ({ applyFilter }) => {
     };
 
     const handleApplyFilter = () => {
-        applyFilter({ sorts, cat, size });
+        applyFilter({ title, price, size, brand});
     };
 
-    const catOptions = [
-        { value: "All", label: "All" },
+    const brandOptions = [
+        { value: "all", label: "All" },
         { value: "Nike", label: "Nike" },
         { value: "Kite", label: "Kite" },
         { value: "Brave", label: "Brave" },
     ];
 
-    const sortOptions = [
+    const priceOptions = [
         { value: "all", label: "All" },
         { value: "cheap", label: "Cheap" },
         { value: "expensive", label: "Expensive" },
@@ -138,15 +143,15 @@ const Catalog_filters = ({ applyFilter }) => {
 
     let arr_select = [
         {
-            value: cat,
-            options: catOptions,
-            onChange: handleFilteringNameChange,
+            value: brand,
+            options: brandOptions,
+            onChange: handleBrandChange,
         },
 
         {
-            value: sorts,
-            options: sortOptions,
-            onChange: handleSortingChange,
+            value: price,
+            options: priceOptions,
+            onChange: handlePriceChange,
         },
 
         {
@@ -160,6 +165,16 @@ const Catalog_filters = ({ applyFilter }) => {
         <section className="filter_section">
             <div className="filters_with_button">
                 <div className="three_filters">
+                    
+                <input
+                    type="text"
+                    name="search"
+                    id="search"
+                    placeholder="Search"
+                    value={title}
+                    onChange={handleTitleChange}
+                />
+
                     {arr_select.map((select, index) => (
                         <div className="select_filter" key={index}>
                             <Select

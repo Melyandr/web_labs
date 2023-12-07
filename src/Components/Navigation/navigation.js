@@ -71,7 +71,7 @@ import {
 
 } from "react-router-dom";
 
-const Navigation = ({searchInputValue, setSearchInput}) => {
+const Navigation = () => {
 
     
 
@@ -89,17 +89,6 @@ const Navigation = ({searchInputValue, setSearchInput}) => {
                 </div>
             </ul>
 
-            <div className="search_input">
-                <input
-                    type="text"
-                    name="search"
-                    id="search"
-                    placeholder="Search"
-                    value={searchInputValue}
-                    onChange={setSearchInput}
-                />
-
-            </div>
         </div>
         <hr/>
 

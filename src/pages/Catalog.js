@@ -8,14 +8,14 @@ import Card from '../Components/card/card'
 
 import Footer from "../Components/Footer/Footer.js";
 import '../Components/Footer/Footer.css'
-const Catalog =({pencilCases2})=> {
+const Catalog =()=> {
 
     // <div>
     // <Catalog_filters/>
     //     <Catalog_cards/>
     //     <Footer/>
     // </div>
-    const [filters, setFilters] = useState({sorts: "all", cat: "All", size: "all"});
+    const [filters, setFilters] = useState({title: " ", price: "all", size: "all", brand: "all"});
 
     const handleApplyFilter = (newFilters) => {
         setFilters(newFilters);
@@ -25,7 +25,7 @@ const Catalog =({pencilCases2})=> {
     return (
         <div>
             <Catalog_filters applyFilter={handleApplyFilter}/>
-            <Catalog_cards pencilCases2={pencilCases2} filters={filters}/>
+            <Catalog_cards  filters={filters}/>
             <Footer/>
         </div>
     );
