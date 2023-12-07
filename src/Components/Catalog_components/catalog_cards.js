@@ -205,13 +205,16 @@ import central_photo from "../../photos/5.jpg";
 import right_photo from "../../photos/6.jpg";
 import CardWithPrice from "./card_with_price";
 import "../Catalog_components/catalog_cards.css";
-import {getAllPencilcases, getFilteredPencilcases} from "../../../src/Api/api.js";
+import {getAllPencilcases, getFilteredPencilcases} from "../../Api/api";
+import third_photo from "../../photos/3.jpg";
+import fourth_photo from "../../photos/4.jpg";
+import fifth_photo from "../../photos/5.jpg";
 
 const CatalogCards = ({ filters}) => {
     let [pencilCases2, setPencilCases] = useState([""]);
 
     useEffect(() => {
-        // Приклад виклику функції отримання всіх олівцевих коробок
+
         const fetchAllPencilcases = async () => {
             try {
                 const allPencilcases = await getAllPencilcases();
@@ -223,7 +226,7 @@ const CatalogCards = ({ filters}) => {
             }
         };
 
-        // Виклик функції отримання всіх олівцевих коробок
+
         fetchAllPencilcases();
     }, []);
 
@@ -243,7 +246,11 @@ const CatalogCards = ({ filters}) => {
         fetchFilteredPencilcases();
     }, [filters]);
 
-
+    const card_images={
+        third_photo: third_photo,
+        fourth_photo: fourth_photo,
+        fifth_photo: fifth_photo,
+    }
     return (
         <section>
             <div className="About-pencilcases-catalog">
@@ -251,7 +258,7 @@ const CatalogCards = ({ filters}) => {
                     <CardWithPrice
                         key={pencilCase.id}
                         id={pencilCase.id}
-                        photo={pencilCase.photo}
+                        photo={card_images[pencilCase.photo]}
                         title={pencilCase.title}
                         text={pencilCase.text}
                         price={pencilCase.price}
