@@ -1,0 +1,157 @@
+.filter-panel {
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+}
+.filters_with_button{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+    margin-left: 5%;
+    height: auto;
+    width: auto;
+}
+.filter-button {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    padding: 5px 30px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #6f6768;
+    border-width: 2px;
+}
+
+.dropdown-button {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+
+.filter-dropdown.active {
+    display: block;
+}
+
+
+.filter-dropdown.active .dropdown-button::after {
+    content: "▲";
+}
+
+
+.filter-dropdown.active .dropdown-content {
+    display: block;
+}
+
+.button_apply{
+    padding:  6px 35px;
+    border-color: #282c34;
+    border-radius: 5px;
+    margin-top: 2%;
+
+
+}
+.filter_section{
+    margin-bottom: 5%;
+}
+.About-pencilcases{
+    margin-bottom: 12%;
+}
+
+
+
+
+
+
+
+/*.filter-panel {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    padding: 10px;*/
+/*}*/
+
+/*.filters_with_button {*/
+/*    display: flex;*/
+/*    flex-direction: column; !* Змінено спрямування блоків на вертикальне *!*/
+/*    align-items: center; !* Це вирівнює блоки по горизонталі по центру *!*/
+/*    margin-right: 5%;*/
+/*    margin-left: 5%;*/
+/*    width: 100%; !* Заповнює весь доступний простір по ширині *!*/
+/*}*/
+
+/*.filter-button {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    margin-bottom: 10px; !* Додано відступ між кнопками фільтрів *!*/
+/*    padding: 5px 20px; !* Зменшено внутрішні відступи *!*/
+/*    border-radius: 5px; !* Зменшено радіус границі *!*/
+/*    border: 1px solid #6f6768; !* Змінено границю *!*/
+/*}*/
+
+/*.dropdown-button {*/
+/*    width: 20px;*/
+/*    height: 20px;*/
+/*    margin-left: 5px;*/
+/*    border: 1px solid #ccc;*/
+/*    background-color: #fff;*/
+/*    cursor: pointer;*/
+/*    text-align: center;*/
+/*    line-height: 18px;*/
+/*    border-radius: 3px;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.filter-dropdown {*/
+/*    display: none; !* Зроблено блок з початковою прихованістю *!*/
+/*}*/
+
+/*.filter-dropdown.active {*/
+/*    display: block; !* Показує блок при активності *!*/
+/*}*/
+
+/*.filter-dropdown.active .dropdown-button::after {*/
+/*    content: "▲";*/
+/*}*/
+
+/*.button_apply {*/
+/*    padding: 6px 35px;*/
+/*    border: 2px solid #282c34; !* Змінено границю *!*/
+/*    border-radius: 5px;*/
+/*    margin-top: 10px; !* Змінено відсотки на пікселі для відступу *!*/
+/*}*/
+
+/*.filter_section {*/
+/*    margin-bottom: 5%;*/
+/*}*/
+
+/*.About-pencilcases {*/
+/*    margin-bottom: 12%;*/
+/*}*/
+
+
+
+.three_filters{
+    display: flex;
+    margin-top: 5px;
+
+}
+.select_filter {
+    margin-right: 10% ;
+    border-radius: 5px;
+    text-align: center;
+    width: 120px;
+    height:1.5rem;
+    border-color: #282c34;
+    border-width: 2px;
+}
+.search_input{
+    display: block;
+}
